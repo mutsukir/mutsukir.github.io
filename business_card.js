@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const start = async() => {
     const mindarThree = new MindARThree({
       container: document.body,
-      imageTargetSrc: 'assets/card_back.mind',
+      imageTargetSrc: 'assets/ptcg03.mind',
       filterMinCF: 0.0000001, filterBeta: 1,
       missTolerance: 15
     });
