@@ -1,0 +1,11 @@
+Model Information:
+* title:	Witch's Retreat
+* source:	https://sketchfab.com/3d-models/witchs-retreat-6ddff528def04b5096cf3dbdd8a95dc9
+* author:	Rick Hoppmann (https://sketchfab.com/tinyruin)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Witch's Retreat" (https://sketchfab.com/3d-models/witchs-retreat-6ddff528def04b5096cf3dbdd8a95dc9) by Rick Hoppmann (https://sketchfab.com/tinyruin) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
