@@ -55,12 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 1 );
       scene.add(light);
 
-      const reticleGeometry = new THREE.RingGeometry( 0.15, 0.2, 32 ).rotateX(- Math.PI / 2);
+      /*const reticleGeometry = new THREE.RingGeometry( 0.15, 0.2, 32 ).rotateX(- Math.PI / 2);
       const reticleMaterial = new THREE.MeshBasicMaterial(); 
       const reticle = new THREE.Mesh(reticleGeometry, reticleMaterial);
       reticle.matrixAutoUpdate = false;
       reticle.visible = false;
-      scene.add(reticle);
+      scene.add(reticle);*/
   
       const renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
       renderer.setPixelRatio(window.devicePixelRatio);
@@ -71,11 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.appendChild(renderer.domElement);
       document.body.appendChild(arButton);
   
-      const itemNames = ['witchs_retreat', 'magehat', 'pine_tree'];
-      const itemHeights = [0.5, 0.5, 1.5];
+      const itemNames = ['lillie', 'gura', 'destiny_ghost'];
+      const itemHeights = [1.5, 1.0, 2.0];
       const items = [];
       for (let i = 0; i < itemNames.length; i++) {
-        const model = await loadGLTF('assets/' + itemNames[i] + '/scene.gltf');
+        const model = await loadGLTF('assets/furniture/' + itemNames[i] + '/scene.gltf');
         normalizeModel(model.scene, itemHeights[i]);
         const item = new THREE.Group();
         item.add(model.scene);
@@ -183,8 +183,8 @@ document.addEventListener('DOMContentLoaded', () => {
           const referenceSpace = renderer.xr.getReferenceSpace(); // ARButton requested 'local' reference space
           const hitPose = hit.getPose(referenceSpace);
 
-          reticle.visible = true;
-	      reticle.matrix.fromArray(hitPose.transform.matrix);
+          //reticle.visible = true;
+	      //reticle.matrix.fromArray(hitPose.transform.matrix);
 
           selectedItem.visible = true;
           selectedItem.position.setFromMatrixPosition(new THREE.Matrix4().fromArray(hitPose.transform.matrix));

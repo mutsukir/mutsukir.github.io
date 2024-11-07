@@ -1,0 +1,11 @@
+Model Information:
+* title:	Low poly Gura
+* source:	https://sketchfab.com/3d-models/low-poly-gura-cc44c590b429431b81bf3326a14e185d
+* author:	Hasksoft (https://sketchfab.com/Hasksoft)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Low poly Gura" (https://sketchfab.com/3d-models/low-poly-gura-cc44c590b429431b81bf3326a14e185d) by Hasksoft (https://sketchfab.com/Hasksoft) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
