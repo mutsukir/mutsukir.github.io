@@ -72,7 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.appendChild(arButton);
   
       const itemNames = ['lillie', 'gura', 'minnie'];
-      const itemHeights = [2.5, 3.0, 0.01];
+      //const itemHeights = [2.5, 3.0, 0.01];
+      const itemHeights = [2.5, 3.0, 0.001];
       const items = [];
       for (let i = 0; i < itemNames.length; i++) {
         const model = await loadGLTF('assets/furniture/' + itemNames[i] + '/scene.gltf');
