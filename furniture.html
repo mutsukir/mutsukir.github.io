@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/",
+        "three/examples/": "https://unpkg.com/three@0.160.0/examples/"
+      }
+    }
+  </script>
+
+  <script type="module" src="./furniture.js"></script>
+  <style>
+    body{
+      margin: 0;
+    }
+    #item-buttons,#confirm-buttons {
+      position: absolute;
+      top: 50px;
+      z-index: 2;
+      display: flex;
+      flex-direction: row;
+      display: none;
+    }
+    .button-image {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      margin: 5px;
+    }
+    .button {
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="item-buttons">
+    <img class="button-image" id="item0" src='textures/027-02.png'/>
+    <img class="button-image" id="item1" src='textures/027-03.png'/>
+    <img class="button-image" id="item2" src='textures/027-04.png'/>
+  </div>
+  <div id="confirm-buttons">
+    <button class="button" id="place">OK</button>
+    <button class="button" id="cancel">X</button>
+  </div>
+</body>
+</html>
