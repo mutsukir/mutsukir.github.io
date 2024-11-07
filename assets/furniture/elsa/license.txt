@@ -1,0 +1,11 @@
+Model Information:
+* title:	Elsa Frozen
+* source:	https://sketchfab.com/3d-models/elsa-frozen-2052efd8a61f4d7b98215d0a857cb654
+* author:	khyrallah2020 (https://sketchfab.com/khyralla1h2020)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Elsa Frozen" (https://sketchfab.com/3d-models/elsa-frozen-2052efd8a61f4d7b98215d0a857cb654) by khyrallah2020 (https://sketchfab.com/khyralla1h2020) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
