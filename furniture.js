@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
       const itemNames = ['lillie', 'gura', 'elsa'];
       //const itemHeights = [2.5, 3.0, 0.01];
-      const itemHeights = [2.5, 3.0, 1.0];
+      const itemHeights = [2.5, 3.0, 0.05];
       const items = [];
       for (let i = 0; i < itemNames.length; i++) {
         const model = await loadGLTF('assets/furniture/' + itemNames[i] + '/scene.gltf');
