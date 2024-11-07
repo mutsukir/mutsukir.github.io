@@ -54,6 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
   
       const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 1 );
       scene.add(light);
+
+      const reticleGeometry = new THREE.RingGeometry( 0.15, 0.2, 32 ).rotateX(- Math.PI / 2);
+      const reticleMaterial = new THREE.MeshBasicMaterial(); 
+      const reticle = new THREE.Mesh(reticleGeometry, reticleMaterial);
+      reticle.matrixAutoUpdate = false;
+      reticle.visible = false;
+      scene.add(reticle);
   
       const renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
       renderer.setPixelRatio(window.devicePixelRatio);
@@ -65,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.appendChild(arButton);
   
       const itemNames = ['witchs_retreat', 'magehat', 'pine_tree'];
-      const itemHeights = [0.9, 0.9, 0.9];
+      const itemHeights = [0.5, 0.5, 1.5];
       const items = [];
       for (let i = 0; i < itemNames.length; i++) {
         const model = await loadGLTF('assets/' + itemNames[i] + '/scene.gltf');
@@ -173,8 +180,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const hitTestResults = frame.getHitTestResults(hitTestSource);
         if (hitTestResults.length) {
           const hit = hitTestResults[0];
+          const referenceSpace = renderer.xr.getReferenceSpace(); // ARButton requested 'local' reference space
+          const hitPose = hit.getPose(referenceSpace);
+
+          reticle.visible = true;
+	      reticle.matrix.fromArray(hitPose.transform.matrix);
+
           selectedItem.visible = true;
-          selectedItem.position.setFromMatrixPosition(new THREE.Matrix4().fromArray(hit.getPose(referenceSpace).transform.matrix));
+          selectedItem.position.setFromMatrixPosition(new THREE.Matrix4().fromArray(hitPose.transform.matrix));
         } else {
           selectedItem.visible = false;
         }
